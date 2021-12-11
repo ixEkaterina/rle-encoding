@@ -2,13 +2,13 @@ object RleEncodingApp extends App {
 
   val rleEncoding = new RleEncoding
 
-  println(rleEncoding.encode("ABCDE")) // A1B1C1D1E1
-
-  println(rleEncoding.encode("AABBCCDD")) // A2B2C2D2
-  println(rleEncoding.encode("XAABBCCDD")) // FIXME: 2XA2AB2BC2CD
-
-  println(rleEncoding.encode("AAAABBBCCXYZDDDDEEEFFFAAAAAABBBBBBBBBBBBBBBBBBBBBBBBBBBBB")) // A4B3C2XYZD4E3F3A6B29
-  println(rleEncoding.encode("AAAABBBCCXYZDDDDEEEFFFAAAAAABBBBBBBBBBBBBBBBBBBBBBBBBBBBBX")) // FIXME: last symbol is lost
+//  println(rleEncoding.encode("ABCDE")) // A1B1C1D1E1
+//
+//  println(rleEncoding.encode("AABBCCDD")) // A2B2C2D2
+//  println(rleEncoding.encode("XAABBCCDD")) // FIXME: 2XA2AB2BC2CD
+//
+//  println(rleEncoding.encode("AAAABBBCCXYZDDDDEEEFFFAAAAAABBBBBBBBBBBBBBBBBBBBBBBBBBBBB")) // A4B3C2XYZD4E3F3A6B29
+  println(rleEncoding.encode("AAAABBBCCXYZDDDDEEEFFFAAAAAABBBBBBBBBBBBBBBBBBBBBBBBBBBBBX" * 10000)) // FIXME: last symbol is lost
 }
 
 trait Block {
